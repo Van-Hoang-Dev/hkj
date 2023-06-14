@@ -15,11 +15,6 @@ let timeID = setTimeout(function setSecond(){
     let currentDate = new Date();
     handSecond.style.transform = 'rotate( '+(currentDate.getSeconds() * 6) +'deg)';
     handMinute.style.transform = 'rotate( '+(currentDate.getMinutes() * 6) +'deg)';
-   if(currentDate.getHours() >= 12){
-        handHour.style.transform = 'rotate( '+((currentDate.getHours()/12) * 30 * 0.5  * currentDate.getMinutes()) +'deg)';
-    }
-    else {
-        handHour.style.transform = 'rotate( '+((currentDate.getHours()) * 30 * 0.5  * currentDate.getMinutes()) +'deg)';
-    }
+    handHour.style.transform = 'rotate( '+((currentDate.getHours()) * 30 * 0.5  * currentDate.getMinutes()) +'deg)';
     second = setTimeout(setSecond, 1000);
 }, 1000);
