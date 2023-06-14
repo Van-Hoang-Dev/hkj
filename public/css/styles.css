@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F6F1F1;
+}
+
+.clock{
+    width: 500px;
+    height: 500px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    position: relative;
+    background: url('https://user-images.githubusercontent.com/5941722/50739290-42a48180-11de-11e9-987e-17164bfc682d.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover ;
+}
+
+.hand {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    top: 0;
+    left: 0;
+
+}
+.hand-second{
+    transform: rotate(60deg);
+}
+.hand-minute{
+    transform: rotate(90deg);
+}
+.hand-hour {
+       transform: rotate(45deg);
+}
+.hand-second::before {
+    content: "";
+    position: absolute;
+    width: 3px;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+   bottom: 170px;
+   background-color: #000;
+}
+
+
+.hand-minute::before {
+    content: "";
+    position: absolute;
+    width: 3px;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+   bottom: 170px;
+   background-color: #2095ae;
+
+}
+.hand-hour::before {
+    content: "";
+    position: absolute;
+    width: 3px;
+    top: 130px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 170px;
+   background-color: #ccc;
+
+}
